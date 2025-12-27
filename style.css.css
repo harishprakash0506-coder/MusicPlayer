@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, #222, #000);
+}
+
+/* Player */
+.player {
+    width: 300px;
+    background: #111;
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.7);
+}
+
+/* Disc */
+.disc {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background: #000;
+    padding: 10px;
+    animation: spin 6s linear infinite;
+}
+
+.disc img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Song Info */
+h2 {
+    font-size: 20px;
+}
+
+p {
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 15px;
+}
+
+/* Progress */
+.progress-container {
+    width: 100%;
+    height: 5px;
+    background: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.progress {
+    width: 65%;
+    height: 100%;
+    background: linear-gradient(90deg, #ff512f, #dd2476);
+    animation: move 5s infinite alternate;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    justify-content: space-around;
+}
+
+.controls button {
+    width: 50px;
+    height: 50px;
+    background: #222;
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.controls button:hover {
+    background: #dd2476;
+    transform: scale(1.1);
+}
+
+.play {
+    background: #ff512f;
+}
+
+/* Animations */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes move {
+    from { width: 10%; }
+    to { width: 80%; }
+}
